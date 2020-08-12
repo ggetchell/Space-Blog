@@ -5,9 +5,9 @@ const PostTile = ({ id, title, story }) => {
   return (
    
     <div className="column">
-      <Link to={`/products/${id}`} className="">
+      <Link to={`/posts/${id}`} className="">
         <div className="card is-shady">
-          <Link to={`/products/${id}`} className="">
+          <Link to={`/posts/${id}`} className="">
             <div className="card-content">
               <div className="content">
                 <h4>

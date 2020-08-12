@@ -24,7 +24,7 @@ const PostShowContainer = (props) => {
       })
       .then((body) => {
         setPost(body.post);
-        setComments(body.post.comments);
+        setComments(body.comments);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`)
       );

@@ -1,6 +1,6 @@
 class Api::V1::PostsController < ApiController
 
-  def inde
+  def index
     render json: Post.all 
   end
 

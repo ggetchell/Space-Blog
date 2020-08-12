@@ -5,7 +5,6 @@ const PostsIndexContainer = (props) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    debugger
     fetch("/api/v1/posts")
       .then((response) => {
         if (response.ok) {
@@ -20,8 +19,7 @@ const PostsIndexContainer = (props) => {
       .then((body) => {
         setPosts(body);
       })
-      .catch((error) => console.error(`Error in fetch: ${error.message}`)
-      );
+      .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
   let postTiles = posts.map((post) => {
@@ -37,9 +35,9 @@ const PostsIndexContainer = (props) => {
 
   return (
     <div>
-      <h1 className="">Posts</h1>
-      <div className="call">
-        <div className="column">{postTiles}</div>
+      <h1 className="title">Posts</h1>
+      <div className="container">
+        <div className="columns">{postTiles}</div>
       </div>
     </div>
   );
