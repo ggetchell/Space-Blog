@@ -23,14 +23,15 @@ const PostShowContainer = (props) => {
         return response.json();
       })
       .then((body) => {
-        setProduct(body.post);
-        setReviews(body.post.comments);
+        setPost(body.post);
+        setComments(body.post.comments);
       })
-      .catch((error) => console.error(`Error in fetch: ${error.message}`));
+      .catch((error) => console.error(`Error in fetch: ${error.message}`)
+      );
   }, []);
 
-  const addReview = (newComment) => {
-    setReviews([...comments, newComment]);
+  const addComment = (newComment) => {
+    setComments([...comments, newComment]);
   };
 
   return (
@@ -38,11 +39,11 @@ const PostShowContainer = (props) => {
       <PostShow
         key={post.id}
         id={post.id}
-        name={post.title}
-        description={post.story}
+        title={post.title}
+        story={post.story}
         comments={comments}
       />
-      <ReviewFormConatiner postId={postId} addComment={addComment} />
+      <CommentFormConatiner postId={postId} addComment={addComment} />
     </div>
   );
 };

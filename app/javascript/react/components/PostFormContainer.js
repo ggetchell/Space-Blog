@@ -92,7 +92,7 @@ const PostFormContainer = (props) => {
             </label>
           </div>
           <div className="column">
-            <label htmlFor="description">
+            <label htmlFor="story">
               <input
                 type="text"
                 id="story"

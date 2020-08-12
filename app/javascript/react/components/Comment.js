@@ -14,15 +14,15 @@ const Comment = ({ id, rating, body, user, postId }) => {
   }
   return (
 
-      <div key={id} className="column is-one-third">
-        <div className="card is-shady">
+      <div key={id} className="column">
+        <div className="card">
           <div className="card-content">
             <div className="content">
-              <h4 className="title has-text-dark-orange">
+              <h4 className="title">
                 {user} - Rating: {rating}
               </h4>
               <p>{body}</p>
-              <div className="button is-purple has-text-weight-bold" onClick={onChangeDelete}>Delete Comment</div>
+              <div className="button" onClick={onChangeDelete}>Delete Comment</div>
             </div>
           </div>
         </div>

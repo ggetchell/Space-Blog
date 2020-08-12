@@ -1,13 +1,10 @@
-class Api::V1::PostController < ApiController
+class Api::V1::PostsController < ApiController
 
-  def index
+  def inde
     render json: Post.all 
   end
 
-  def new 
-    render json: Post.new
-  end
-
+  
   def create
     new_post = Post.new(post_params)
 
@@ -26,15 +23,6 @@ class Api::V1::PostController < ApiController
   def edit
   end
 
-  def update 
-    update_post = Post.update(post_params)
-
-    if update_post.save
-      render json: update_post
-    else
-      render json: {errors: update_post.errors.full_messages}
-    end
-  end
 
   def destroy
     @post = Post.find(destroy_post_params)

@@ -5,6 +5,7 @@ const PostsIndexContainer = (props) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    debugger
     fetch("/api/v1/posts")
       .then((response) => {
         if (response.ok) {
@@ -19,7 +20,8 @@ const PostsIndexContainer = (props) => {
       .then((body) => {
         setPosts(body);
       })
-      .catch((error) => console.error(`Error in fetch: ${error.message}`));
+      .catch((error) => console.error(`Error in fetch: ${error.message}`)
+      );
   }, []);
 
   let postTiles = posts.map((post) => {
@@ -28,7 +30,7 @@ const PostsIndexContainer = (props) => {
         id={post.id}
         key={post.id}
         title={post.title}
-        description={post.story}
+        story={post.story}
       />
     );
   });

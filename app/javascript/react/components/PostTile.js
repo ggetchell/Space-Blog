@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PostTile = ({ id, title, story, }) => {
+const PostTile = ({ id, title, story }) => {
   return (
    
     <div className="column">
+      <Link to={`/products/${id}`} className="">
+        <div className="card is-shady">
+          <Link to={`/products/${id}`} className="">
             <div className="card-content">
               <div className="content">
                 <h4>
@@ -16,8 +19,10 @@ const PostTile = ({ id, title, story, }) => {
                 <p>{story}</p>
               </div>
             </div>
-          </div>
-
+          </Link>
+        </div>
+      </Link>
+    </div>
   );
 };
 

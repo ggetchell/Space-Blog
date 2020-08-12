@@ -30,8 +30,6 @@ skip_before_action :verify_authenticity_token
       params.require(:id)
     end
 
-    def find
-      comments = Comment.find(params[:id])
-    end
+    
 end
 
