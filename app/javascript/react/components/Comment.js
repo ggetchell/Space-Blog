@@ -3,7 +3,7 @@ import React from "react";
 const Comment = ({ id, rating, body, user, postId }) => {
   const onChangeDelete = event => {
     event.preventDefault()
-    fetch(`/api/v1/products/${postId}/reviews/${id}.json`, {
+    fetch(`/api/v1/posts/${postId}/comments/${id}.json`, {
       credentials: "same-origin",
       method: 'DELETE',
       headers: {

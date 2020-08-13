@@ -20,10 +20,6 @@ class Api::V1::PostsController < ApiController
     render json: post, serializer: PostShowSerializer
   end
 
-  def edit
-  end
-
-
   def destroy
     @post = Post.find(destroy_post_params)
     @post.destroy

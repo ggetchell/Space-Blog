@@ -24,7 +24,7 @@ const PostShowContainer = (props) => {
       })
       .then((body) => {
         setPost(body.post);
-        setComments(body.comments);
+        setComments(body.post.comments);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`)
       );
@@ -37,11 +37,11 @@ const PostShowContainer = (props) => {
   return (
     <div className="">
       <PostShow
-        key={post.id}
         id={post.id}
+        key={post.id}
         title={post.title}
         story={post.story}
-        comments={comments}
+        comments={post.comments}
       />
       <CommentFormConatiner postId={postId} addComment={addComment} />
     </div>

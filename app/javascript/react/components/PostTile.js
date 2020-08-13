@@ -5,10 +5,7 @@ const PostTile = ({ id, title, story }) => {
   return (
    
     <div className="column">
-      <Link to={`/posts/${id}`} className="">
-        <div className="card is-shady">
-          <Link to={`/posts/${id}`} className="">
-            <div className="card-content">
+           <div className="card-content">
               <div className="content">
                 <h4>
                   <Link to={`/posts/${id}`} className="has-text">
@@ -19,10 +16,7 @@ const PostTile = ({ id, title, story }) => {
                 <p>{story}</p>
               </div>
             </div>
-          </Link>
-        </div>
-      </Link>
-    </div>
+        </div>      
   );
 };
 

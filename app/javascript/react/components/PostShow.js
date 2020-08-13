@@ -6,8 +6,8 @@ const PostShow = ({ id, title, story, comments }) => {
   const postComments = comments.map((comment) => {
     return (
       <Comment
-        key={comment.id}
         id={comment.id}
+        key={comment.id}
         rating={comment.rating}
         body={comment.body}
         user={comment.commenter_name}
@@ -18,17 +18,17 @@ const PostShow = ({ id, title, story, comments }) => {
     
     <div className="card-content">
       <div className="content">
-        <h4 className="title">{title}</h4>
-          <p>{story}</p>
+            <h4 className="title">{title}</h4>
+            <p>{story}</p>
             <div className="buttons">
                 <button className="button is-primary">
                   <b> ... </b>
-                  </button>
-                </div>
-              </div>
-            
-        <div className="column">{postComments}</div>
+                </button>
+            </div>
       </div>
+      <div className="column">
+        {postComments}</div>
+    </div>
   );  
 };
 

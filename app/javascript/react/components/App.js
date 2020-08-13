@@ -12,7 +12,7 @@ export const App = (props) => {
         <Route exact path="/" component={PostsContainer} />
         <Route exact path="/posts" component={PostsContainer} />
         <Route exact path="/posts/new" component={PostFormContainer} />
-        <Route exact path="/posts/:id" component={PostShowContainer} />
+        <Route exact path="/posts/id" component={PostShowContainer} />
       </Switch>    
     </BrowserRouter>
   );
